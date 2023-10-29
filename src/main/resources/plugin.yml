@@ -1,0 +1,11 @@
+name: MintLogs
+version: '${version}'
+main: dk.mintprison.mintlogs.MintLogs
+prefix: LOGSYSTEM
+softdepend: [HeadDatabase]
+authors: [Sommer]
+description: Simpelt men godt logsystem til Mint.
+website: mintprison.dk, discord.gg/mintprison
+commands:
+  logs:
+    description: Logkommando
