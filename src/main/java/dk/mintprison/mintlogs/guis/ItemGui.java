@@ -8,7 +8,6 @@ import dk.mintprison.mintlogs.MintLogs;
 import dk.mintprison.mintlogs.config.ConfigManager;
 import me.arcaniax.hdb.api.HeadDatabaseAPI;
 import net.kyori.adventure.text.Component;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -25,11 +24,11 @@ public class ItemGui {
         gui.getFiller().fillBottom(ItemBuilder.from(new ItemStack(Material.STAINED_GLASS_PANE, 1, (short) 7)).setName("§b").asGuiItem());
         gui.setItem(5, 3, ItemBuilder.from(Material.ARROW).setName("§cTilbage.").asGuiItem(event -> {
             gui.previous();
-            gui.updateTitle("§9Logmenu §8(Side " + gui.getCurrentPageNum() + "/" + gui.getPagesNum() + ")");
+            gui.updateTitle("§9Logmenu §7- Items §8(" + gui.getCurrentPageNum() + "/" + gui.getPagesNum() + ")");
         }));
         gui.setItem(5, 7, ItemBuilder.from(Material.PAPER).setName("§aNæste.").asGuiItem(event -> {
             gui.next();
-            gui.updateTitle("§9Logmenu §8(Side " + gui.getCurrentPageNum() + "/" + gui.getPagesNum() + ")");
+            gui.updateTitle("§9Logmenu §7- Items §8(" + gui.getCurrentPageNum() + "/" + gui.getPagesNum() + ")");
         }));
         gui.setItem(5, 5, ItemBuilder.from(new ItemStack(Material.INK_SACK, 1, (short) 1)).setName("§cTilbage").asGuiItem(event -> {
             MainGui.mainGui(p);

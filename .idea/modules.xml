@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdeaProjects.MintLogs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/IdeaProjects.MintLogs.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdeaProjects.MintLogs.test.iml" filepath="$PROJECT_DIR$/.idea/modules/IdeaProjects.MintLogs.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MintLogs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/MintLogs.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MintLogs.test.iml" filepath="$PROJECT_DIR$/.idea/modules/MintLogs.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/dk.mintprison.MintLogs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/dk.mintprison.MintLogs.main.iml" />

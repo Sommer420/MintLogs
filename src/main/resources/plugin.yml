@@ -8,4 +8,5 @@ description: Simpelt men godt logsystem til Mint.
 website: mintprison.dk, discord.gg/mintprison
 commands:
   logs:
+    aliases: log
     description: Logkommando
