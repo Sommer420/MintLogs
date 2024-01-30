@@ -12,7 +12,7 @@ public class API {
     @Param id: ID på itemet. (Head: 42167, Item: DIAMOND_BLOCK)
     @Param antal: Antal der skal tilføjes.
      */
-    public static void addLog(ItemType type, String id, Integer antal){
+    public static void addLog(API.ItemType type, String id, Integer antal){
         if (type.equals(ItemType.HEAD)){
             MintLogs.logsYML.set("heads."+id, (antal+MintLogs.logsYML.getInt("heads."+id)));
         } else if (type.equals(ItemType.ITEM)) {
