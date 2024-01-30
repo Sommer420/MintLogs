@@ -27,4 +27,9 @@ public final class MintLogs extends JavaPlugin {
         logs.saveConfig();
          */
     }
+
+    @Override
+    public void onDisable() {
+        logs.saveConfig();
+    }
 }

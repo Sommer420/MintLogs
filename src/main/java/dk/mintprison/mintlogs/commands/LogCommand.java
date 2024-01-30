@@ -16,6 +16,12 @@ public class LogCommand implements CommandExecutor{
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if (args.length == 1 && args[0].equalsIgnoreCase("ver")){
+            sender.sendMessage("§9Logmenu §7- Information");
+            sender.sendMessage(" §7Systemet er udviklet af Sommer til MintPrison.");
+            sender.sendMessage(" §7Discord: §f.sqmmer");
+            return true;
+        }
         if (sender.isOp() || sender instanceof ConsoleCommandSender){
             if (args.length > 0){
                 if (args[0].equalsIgnoreCase("set")) {
@@ -61,8 +67,24 @@ public class LogCommand implements CommandExecutor{
                     }
                 } else if (args[0].equalsIgnoreCase("gui")) {
                     MainGui.mainGui((Player) sender);
+                } else if (args[0].equalsIgnoreCase("help")) {
+                    sender.sendMessage("§9Logmenu §7- Hjælp");
+                    sender.sendMessage("§7Heads:\n §f/log add head:<id> <antal>\n §7Eksempel: §f/log add head:1 1\n §7Du kan også bruge §f/set §7i stedet for §f/add§7.");
+                    sender.sendMessage("§7Items:\n §f/log add item-<id> <antal>\n §7Eksempel: §f/log add item-iron_ingot 1\n §7Du kan også bruge §f/set §7i stedet for §f/add§7.");
+                } else if (args[0].equalsIgnoreCase("reload")) {
+                    try {
+                        MintLogs.logs.reloadConfig();
+                        MintLogs.logsYML = MintLogs.logs.getConfig();
+                        sender.sendMessage("§aDu genindlæste config.yml!");
+                    } catch (Exception e) {
+                        sender.sendMessage("§cDer skete en fejl! §7("+e.getMessage()+")");
+                        e.printStackTrace();
+                    }
+                } else if (args[0].equalsIgnoreCase("iteminfo")) {
+                    Player p = (Player) sender;
+                    sender.sendMessage("§7Dit item: §f"+(p.getInventory().getItemInHand()));
                 } else {
-                    sender.sendMessage("§cUkendt kommando!");
+                    sender.sendMessage("§cUkendt kommando!\nBrug: /log <gui/list/help/set/add> (id) (antal)");
                 }
             } else {
                 sender.sendMessage("§cUkendt kommando!");
